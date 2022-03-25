@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: catalog-server
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/bdbackend
+    username: root
+    password:
+    jpa:
+      deferDatasourceInitialization: true
+      hibernate:
+        ddlAuto: create-drop
+server:
+  port: 8082
+
+
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    preferIpAddress: true
